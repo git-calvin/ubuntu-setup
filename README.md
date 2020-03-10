@@ -4,7 +4,7 @@
 
 ```bash
 $ sudo apt-get -y update && apt-get upgrade
-$ sudo apt-get install softeware-properties-common
+$ sudo apt-get install software-properties-common
 ```
 
 ***

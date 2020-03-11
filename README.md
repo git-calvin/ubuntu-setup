@@ -1,18 +1,18 @@
-# Ubuntu Setup
+## Ubuntu Development Setup
 
-### <u>Update</u>
+#### <u>Update</u>
 
 ```bash
-$ sudo apt-get -y update && apt-get upgrade
+$ sudo apt-get update && apt-get upgrade
 $ sudo apt-get install software-properties-common
 ```
 
 ***
 
-### <u>Useful Packages</u>
+#### <u>Useful Packages</u>
 
 ```bash
-$ sudo apt-get install curl wget htop nmap traceroute tmux unzip vim make ack silversearcher-ag mtr pydf lftp aria2 nnn libssl-dev libreadline-dev zlib1g-dev clang gcc-multilib build-essential lobffi-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libffi-dev libusb-1.0-0-dev libudev-dev libg1-mesa-dev libpulse-dev exfat-fuse exfat-utils cmake pkg-config libgtk-3-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev gfortran openexr libtbb2 libtbb-dev libdc1394-22-dev autoconf bison libyaml-dev atp-transport-https ca-certificates
+$ sudo apt-get install curl wget htop nmap traceroute tmux unzip vim make ack silversearcher-ag mtr pydf lftp aria2 nnn libssl-dev libreadline-dev zlib1g-dev clang gcc-multilib build-essential libffi-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libffi-dev libusb-1.0-0-dev libudev-dev libpulse-dev exfat-fuse exfat-utils cmake pkg-config libgtk-3-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev gfortran openexr libtbb2 libtbb-dev libdc1394-22-dev autoconf bison libyaml-dev ca-certificates
 ```
 
 ```bash
@@ -25,7 +25,7 @@ $ sudo pip3 install thefuck
 
 ***
 
-### <u>Git</u> 
+#### <u>Git</u> 
 
 ```bash
 $ sudo apt-get install git git-core
@@ -36,7 +36,7 @@ $ git config --global color.ui auto
 
 ***
 
-### <u>Mercurial</u>
+#### <u>Mercurial</u>
 
 ```bash
 $ sudo apt-get install mercurial
@@ -44,7 +44,7 @@ $ sudo apt-get install mercurial
 
 ***
 
-### <u>Subversion</u>
+#### <u>Subversion</u>
 
 ```bash
 $ sudo apt-get install subversion
@@ -52,7 +52,7 @@ $ sudo apt-get install subversion
 
 ***
 
-### <u>Zsh</u>
+#### <u>Zsh</u>
 
 ```bash
 $ sudo apt-get install zsh
@@ -60,7 +60,7 @@ $ sudo apt-get install zsh
 
 ***
 
-### <u>Oh My Zsh</u>
+#### <u>Oh My Zsh</u>
 
 via curl:
 
@@ -90,7 +90,7 @@ $ source ~/.zshrc
 
 ***
 
-### <u>Powerlevel10k</u>
+#### <u>Powerlevel10k</u>
 
 ```bash
 $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
@@ -102,9 +102,11 @@ Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
 $ source ~/.zshrc
 ```
 
+Recommended Font: [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+
 ***
 
-### <u>Fonts</u>
+#### <u>Fonts</u>
 
 ```bash
 $ sudo apt-get install ttf-mscorefonts-installer
@@ -113,7 +115,7 @@ $ sudo apt-get install fonts-powerline
 
 ***
 
-### <u>Generate SSH Keys</u>
+#### <u>Generate SSH Keys</u>
 
 ```bash
 $ ssh-keygen -o -a 256 -t ed25519
@@ -127,14 +129,14 @@ To verify, `ssh -T git@github.com`. You should get a message "Successfully Authe
 
 ***
 
-### <u>Python 3</u>
+#### <u>Python 3</u>
 
 To see which version of Python 3 your have installed, run
 
 ```bash
 $ python3 --version
 $ sudo apt-get update
-$ sudo apt-get install python3.7
+$ sudo apt-get install python3.8
 $ sudo apt-get install python3-dev
 $ sudo apt-get install -y python3-pip
 $ sudo apt-get python3-numpy
@@ -148,7 +150,7 @@ $ pip3 install <package_name>
 
 ***
 
-### <u>Apache</u>
+#### <u>Apache</u>
 
 ```bash
 $ sudo apt-get install apache2
@@ -156,11 +158,11 @@ $ sudo apt-get install apache2
 
 ***
 
-### <u>MySQL</u>
+#### <u>MySQL</u>
 
 ```bash
 $ sudo apt-get install mysql-server
-$ sudo mysql_sercure_installation
+$ sudo mysql_secure_installation
 ```
 
 ```bash
@@ -169,7 +171,7 @@ $ sudo mysql -u root -p
 
 ***
 
-### <u>PHP</u>
+#### <u>PHP</u>
 
 ```bash
 $ sudo apt-get install php libapache2-mod-php php-mysql
@@ -180,7 +182,7 @@ $ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 
 ***
 
-### <u>Ruby</u>
+#### <u>Ruby</u>
 
 ```bash
 $ sudo apt-get update
@@ -189,34 +191,30 @@ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 $ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 $ source ~/.zshrc
 $ rbenv install -l
-$ rbenv install 2.5.1
-$ rbenv global 2.5.1
+$ rbenv install 2.7.0
+$ rbenv global 2.7.0
 $ ruby -v
 ```
 
 ```bash
 $ sudo apt-get install rubygems
-$ sudo gem install sass
-$ sudo gem install compass
+$ gem install sass
+$ gem install compass
 ```
 
 ***
 
-### <u>Java 8</u>
+#### <u>Java 8</u>
 
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install openjdk-8-jdk openjdk-8-jre
 $ java -version
-$ cat >> /etc/environment <<EOL
-JAVA_HOME= /usr/lib/jvm/java-8-openjdk-amd64
-JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
-EOL
 ```
 
 ***
 
-### <u>Node.js</u>
+#### <u>Node.js</u>
 
 ```bash
 $ sudo apt-get install nodejs
@@ -226,7 +224,7 @@ $ nodejs -v
 
 ***
 
-### <u>Docker</u>
+#### <u>Docker</u>
 
 ```bash
 $ sudo apt-get update
@@ -243,7 +241,7 @@ $ sudo usermod -aG docker <username>
 
 ***
 
-### <u>AWS CLI</u>
+#### <u>AWS CLI</u>
 
 ```bash
 $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

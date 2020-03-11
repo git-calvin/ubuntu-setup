@@ -90,21 +90,6 @@ $ source ~/.zshrc
 
 ***
 
-#### <u>Powerlevel10k</u>
-
-```bash
-$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-```
-
-Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
-
-```bash
-$ source ~/.zshrc
-```
-
-Recommended Font: [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
-
-***
 
 #### <u>Fonts</u>
 
